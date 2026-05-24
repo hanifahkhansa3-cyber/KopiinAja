@@ -90,7 +90,7 @@
 
         .card-image {
             width: 100%;
-            height: 180px;
+            height: 220px;
             object-fit: cover;
         }
 
@@ -141,10 +141,15 @@
         }
 
         .price {
-            font-size: 1.2rem;
-            font-weight: 700;
+            font-size: 1.3rem;
+            font-weight: bold;
             color: var(--accent-color);
             margin-top: auto;
+            background-color: #f7f5f0;
+            padding: 4px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            align-self: flex-start;
         }
 
         /* Payment Section */
@@ -217,54 +222,54 @@
 
     <header>
         <h1>KopiinAja</h1>
-        <p>Kopi botolan penunjang produktivitas dan fokus kuliah kamu.</p>
+        <p>Kopi botolan praktis penunjang produktivitas dan fokus kuliah kamu.</p>
     </header>
 
     <div class="container">
         <div class="menu-grid">
             <div class="card">
-                <img class="card-image" src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=600&auto=format&fit=crop" alt="Kopi Titik Temu">
+                <img class="card-image" src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=600&auto=format&fit=crop" alt="Kopi Titik Temu Botol">
                 <div class="card-content">
                     <div>
                         <span class="status-badge status-ready">Ready Stock</span>
                         <div class="coffee-name">Kopi Titik Temu</div>
-                        <div class="coffee-original">Es Kopi Susu Gula Aren</div>
-                        <p class="coffee-desc">Menu signature yang pas buat nemenin diskusi santai atau kerja kelompok bareng temen kelas.</p>
+                        <div class="coffee-original">Es Kopi Susu Gula Aren (Botol)</div>
+                        <p class="coffee-desc">Menu signature dalam kemasan botol praktis. Pas banget buat nemenin diskusi santai atau kerja kelompok bareng temen kelas.</p>
                     </div>
-                    <div class="price">Rp 18.000</div>
+                    <div class="price">Rp 12.000</div>
                 </div>
             </div>
 
             <div class="card">
-                <img class="card-image" src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=600&auto=format&fit=crop" alt="Kopi Kejar Tayang">
+                <img class="card-image" src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?q=80&w=600&auto=format&fit=crop" alt="Kopi Kejar Tayang Botol">
                 <div class="card-content">
                     <div>
                         <span class="status-badge status-ready">Ready Stock</span>
                         <div class="coffee-name">Kopi Kejar Tayang</div>
-                        <div class="coffee-original">Caramel Macchiato</div>
-                        <p class="coffee-desc">Perpaduan espresso dan sirup karamel yang manis, cocok buat booster fokus pas dapet tugas dadakan.</p>
+                        <div class="coffee-original">Caramel Macchiato (Botol)</div>
+                        <p class="coffee-desc">Perpaduan espresso mantap dan sirup karamel manis dalam botol, cocok buat booster fokus pas dapet tugas dadakan.</p>
                     </div>
-                    <div class="price">Rp 22.000</div>
+                    <div class="price">Rp 12.000</div>
                 </div>
             </div>
 
             <div class="card">
-                <img class="card-image" src="https://images.unsplash.com/photo-1534778101976-62847782c213?q=80&w=600&auto=format&fit=crop" alt="Kopi Jam Lembur">
+                <img class="card-image" src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=600&auto=format&fit=crop" alt="Kopi Jam Lembur Botol">
                 <div class="card-content">
                     <div>
                         <span class="status-badge status-po">Pre-Order (H+1)</span>
                         <div class="coffee-name">Kopi Jam Lembur</div>
-                        <div class="coffee-original">Cappuccino</div>
-                        <p class="coffee-desc">Rasa kopi yang lebih strong dengan tekstur lembut, pas untuk nemenin kamu yang butuh kafein ekstra.</p>
+                        <div class="coffee-original">Cappuccino Creamy (Botol)</div>
+                        <p class="coffee-desc">Rasa kopi strong dengan tekstur lembut kemasan botol siap minum, pas untuk nemenin kamu yang butuh kafein ekstra.</p>
                     </div>
-                    <div class="price">Rp 20.000</div>
+                    <div class="price">Rp 12.000</div>
                 </div>
             </div>
         </div>
 
         <div class="payment-section">
             <h3>Sistem Pemesanan & Pembayaran</h3>
-            <p>Silakan cek status ketersediaan menu di atas terlebih dahulu. Bayar langsung melalui transfer ke nomor GoPay berikut:</p>
+            <p>Silakan cek status ketersediaan menu botol di atas. Bayar langsung melalui transfer ke nomor GoPay berikut:</p>
             
             <div class="gopay-box">
                 <span style="font-size: 0.85rem; color: #555; display: block; margin-bottom: 5px; font-weight: bold;">Nomor GoPay KopiinAja:</span>
@@ -272,10 +277,10 @@
             </div>
 
             <p class="payment-instruction">
-                Setelah melakukan transfer, mohon klik tombol di bawah ini untuk mengirimkan bukti pembayaran agar pesanan kamu bisa segera diproses.
+                Setelah melakukan transfer, mohon klik tombol di bawah ini untuk mengirimkan screenshot bukti pembayaran agar pesanan botolmu langsung diproses.
             </p>
 
-            <a href="https://wa.me/6281292541637?text=Halo%20Admin%20KopiinAja%2C%20saya%20mau%20kirim%20bukti%20pembayaran%20kopi%20saya." class="btn-wa" target="_blank">
+            <a href="https://wa.me/6281292541637?text=Halo%20Admin%20KopiinAja%2C%20saya%20mau%20kirim%20bukti%20pembayaran%20kopi%20botol%20saya." class="btn-wa" target="_blank">
                 📱 Kirim Bukti Transfer ke WA
             </a>
         </div>
