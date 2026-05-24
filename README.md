@@ -6,7 +6,7 @@
     <title>KopiinAja - Kopi Botolan Mahasiswa</title>
     <style>
         :root {
-            --bg-color: #fdfdfb;
+            --bg-color: #ffffff;
             --main-text: #2d2926;
             --accent-color: #8c6239;
             --card-bg: #ffffff;
@@ -33,82 +33,93 @@
 
         header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 50px 20px;
             border-bottom: 1px solid var(--border-color);
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto 40px auto;
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1200&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            border-radius: 12px;
-            color: #ffffff;
         }
 
         header h1 {
-            font-size: 3.2rem;
+            font-size: 3rem;
             letter-spacing: 2px;
-            color: #ffffff;
+            color: var(--accent-color);
             font-weight: 800;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         header p {
-            color: #e0e0e0;
+            color: #666;
             margin-top: 10px;
             font-size: 1.1rem;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
+        /* Layout Grid Utama dengan Jarak (Gap) yang Jelas Antar Menu */
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px; 
             margin-top: 20px;
+            padding: 10px;
         }
 
         .card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+        }
+
+        /* Wadah Gambar dengan Background Putih Bersih */
+        .card-image-container {
+            width: 100%;
+            height: 320px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 15px;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .card-image {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
         .card-content {
-            padding: 20px;
+            padding: 25px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            background-color: #ffffff;
         }
 
         .status-badge {
             align-self: flex-start;
-            padding: 4px 10px;
-            border-radius: 4px;
+            padding: 4px 12px;
+            border-radius: 6px;
             font-size: 0.75rem;
             font-weight: 600;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .status-ready {
@@ -122,67 +133,75 @@
         }
 
         .coffee-name {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: 700;
-            margin-bottom: 2px;
+            margin-bottom: 4px;
             color: #111;
         }
 
         .coffee-original {
-            font-size: 0.8rem;
-            color: #999;
-            margin-bottom: 10px;
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 12px;
         }
 
         .coffee-desc {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #555;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .price {
-            font-size: 1.3rem;
-            font-weight: bold;
+            font-size: 1.35rem;
+            font-weight: 700;
             color: var(--accent-color);
             margin-top: auto;
             background-color: #f7f5f0;
-            padding: 4px 10px;
-            border-radius: 6px;
+            padding: 6px 14px;
+            border-radius: 8px;
             display: inline-block;
             align-self: flex-start;
         }
 
-        /* Payment Section */
+        /* Bagian Sistem Informasi & Pembayaran */
         .payment-section {
-            background: var(--card-bg);
+            background: #ffffff;
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 35px;
-            margin-top: 50px;
+            border-radius: 16px;
+            padding: 40px 20px;
+            margin-top: 60px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
         }
 
         .payment-section h3 {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             margin-bottom: 15px;
             color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .payment-section p {
+            font-size: 1rem;
+            color: #444;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
         }
 
         .gopay-box {
             background-color: #f0f7ff;
             border: 1px solid #b3d7ff;
-            border-radius: 8px;
-            padding: 15px;
+            border-radius: 12px;
+            padding: 20px;
             display: inline-block;
-            margin: 15px 0;
+            margin: 10px 0 25px 0;
         }
 
         .gopay-number {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             font-weight: bold;
             color: #0066cc;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         .btn-wa {
@@ -190,29 +209,32 @@
             background-color: #25d366;
             color: white;
             text-decoration: none;
-            padding: 12px 25px;
+            padding: 14px 35px;
             border-radius: 30px;
             font-weight: bold;
-            margin-top: 15px;
-            transition: background-color 0.2s;
+            font-size: 1.05rem;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            transition: background-color 0.2s, transform 0.2s;
         }
 
         .btn-wa:hover {
             background-color: #1ebd58;
+            transform: scale(1.03);
         }
 
         .payment-instruction {
-            max-width: 550px;
-            margin: 15px auto 0 auto;
+            max-width: 600px;
+            margin: 20px auto 0 auto;
             font-size: 0.9rem;
-            color: #666;
+            color: #777;
+            line-height: 1.5;
         }
 
         footer {
             text-align: center;
-            margin-top: 60px;
-            padding: 25px;
-            font-size: 0.85rem;
+            margin-top: 80px;
+            padding: 30px 20px;
+            font-size: 0.9rem;
             color: #999;
             border-top: 1px solid var(--border-color);
         }
@@ -222,72 +244,80 @@
 
     <header>
         <h1>KopiinAja</h1>
-        <p>Kopi botolan praktis penunjang produktivitas dan fokus kuliah kamu.</p>
+        <p>Solusi kopi botolan praktis buat nemenin produktivitas harianmu.</p>
     </header>
 
     <div class="container">
         <div class="menu-grid">
+            
             <div class="card">
-                <img class="card-image" src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=600&auto=format&fit=crop" alt="Kopi Titik Temu Botol">
+                <div class="card-image-container">
+                    <img class="card-image" src="image_6.png" alt="Kopi Kelas Pagi">
+                </div>
                 <div class="card-content">
                     <div>
                         <span class="status-badge status-ready">Ready Stock</span>
-                        <div class="coffee-name">Kopi Titik Temu</div>
-                        <div class="coffee-original">Es Kopi Susu Gula Aren (Botol)</div>
-                        <p class="coffee-desc">Menu signature dalam kemasan botol praktis. Pas banget buat nemenin diskusi santai atau kerja kelompok bareng temen kelas.</p>
+                        <div class="coffee-name">Kopi Kelas Pagi</div>
+                        <div class="coffee-original">Es Kopi Susu Mantap</div>
+                        <p class="coffee-desc">Racikan es kopi susu klasik yang creamy dan pas di lidah. Sangat cocok sebagai amunisi andalan penahan kantuk sebelum masuk kelas jam pertama.</p>
                     </div>
                     <div class="price">Rp 12.000</div>
                 </div>
             </div>
 
             <div class="card">
-                <img class="card-image" src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?q=80&w=600&auto=format&fit=crop" alt="Kopi Kejar Tayang Botol">
+                <div class="card-image-container">
+                    <img class="card-image" src="image_6.png" alt="Kopi Kelas Siang">
+                </div>
                 <div class="card-content">
                     <div>
                         <span class="status-badge status-ready">Ready Stock</span>
-                        <div class="coffee-name">Kopi Kejar Tayang</div>
-                        <div class="coffee-original">Caramel Macchiato (Botol)</div>
-                        <p class="coffee-desc">Perpaduan espresso mantap dan sirup karamel manis dalam botol, cocok buat booster fokus pas dapet tugas dadakan.</p>
+                        <div class="coffee-name">Kopi Kelas Siang</div>
+                        <div class="coffee-original">Es Kopi Susu Manis Gula Aren</div>
+                        <p class="coffee-desc">Sentuhan manis alami gula aren dipadu espresso berkualitas tinggi. Pilihan tepat untuk mengembalikan fokus yang hilang saat siang bolong.</p>
                     </div>
                     <div class="price">Rp 12.000</div>
                 </div>
             </div>
 
             <div class="card">
-                <img class="card-image" src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=600&auto=format&fit=crop" alt="Kopi Jam Lembur Botol">
+                <div class="card-image-container">
+                    <img class="card-image" src="image_6.png" alt="Kopi Nugas Malam">
+                </div>
                 <div class="card-content">
                     <div>
                         <span class="status-badge status-po">Pre-Order (H+1)</span>
-                        <div class="coffee-name">Kopi Jam Lembur</div>
-                        <div class="coffee-original">Cappuccino Creamy (Botol)</div>
-                        <p class="coffee-desc">Rasa kopi strong dengan tekstur lembut kemasan botol siap minum, pas untuk nemenin kamu yang butuh kafein ekstra.</p>
+                        <div class="coffee-name">Kopi Nugas Malam</div>
+                        <div class="coffee-original">Es Kopi Susu Creamy Mocca</div>
+                        <p class="coffee-desc">Rasa kopi susu dengan paduan cokelat mocca yang tebal dan tekstur lembut. Menemanimu begadang menyelesaikan tumpukan tugas perkuliahan.</p>
                     </div>
                     <div class="price">Rp 12.000</div>
                 </div>
             </div>
+
         </div>
 
         <div class="payment-section">
             <h3>Sistem Pemesanan & Pembayaran</h3>
-            <p>Silakan cek status ketersediaan menu botol di atas. Bayar langsung melalui transfer ke nomor GoPay berikut:</p>
+            <p>Silakan pastikan status ketersediaan stok produk pada badge menu di atas sebelum memesan. Transaksi pembayaran dapat langsung dikirimkan melalui transfer saldo GoPay:</p>
             
             <div class="gopay-box">
-                <span style="font-size: 0.85rem; color: #555; display: block; margin-bottom: 5px; font-weight: bold;">Nomor GoPay KopiinAja:</span>
+                <span style="font-size: 0.9rem; color: #555; display: block; margin-bottom: 6px; font-weight: bold;">Nomor Resmi GoPay KopiinAja:</span>
                 <div class="gopay-number">0812 9254 1637</div>
             </div>
 
             <p class="payment-instruction">
-                Setelah melakukan transfer, mohon klik tombol di bawah ini untuk mengirimkan screenshot bukti pembayaran agar pesanan botolmu langsung diproses.
+                Setelah proses transfer berhasil diselesaikan, harap simpan screenshot bukti transaksi dan klik tombol tautan di bawah ini untuk mengirimkannya langsung via chat WhatsApp agar pesanan botolmu segera diproses.
             </p>
 
-            <a href="https://wa.me/6281292541637?text=Halo%20Admin%20KopiinAja%2C%20saya%20mau%20kirim%20bukti%20pembayaran%20kopi%20botol%20saya." class="btn-wa" target="_blank">
+            <a href="https://wa.me/6281292541637?text=Halo%20Admin%20KopiinAja%2C%20saya%20ingin%20mengirimkan%20bukti%20pembayaran%20untuk%20pesanan%20kopi%20botol%20saya." class="btn-wa" target="_blank">
                 📱 Kirim Bukti Transfer ke WA
             </a>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 KopiinAja. Diproduksi secara higienis dalam kemasan botol praktis.</p>
+        <p>&copy; 2026 KopiinAja. Diproduksi secara higienis dalam kemasan botol praktis tanpa menampilkan informasi data pribadi eksternal.</p>
     </footer>
 
 </body>
